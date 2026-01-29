@@ -1,0 +1,173 @@
+.project-headings {
+  display: block;
+  padding-bottom: 0.75rem;
+}
+
+.project-headings .project-title,
+.project-headings .project-subtitle {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #1f2a33;
+}
+
+.project-headings .project-subtitle {
+  display: inline;
+  margin-left: 0.6rem;
+}
+
+.project-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2a33;
+  letter-spacing: 0.2px;
+  line-height: 1.35;
+}
+
+.project-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4a5a67;
+  margin-left: 0.5rem;
+}
+
+.project-container {
+  margin: auto;
+  margin-top: 7.5rem;
+  max-width:1000px;
+}
+
+.project-description {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.0rem;
+}
+
+.project-featured-image {
+  max-width:35%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.project-copy-container {
+  max-width: 56%;
+  text-align: left;
+}
+
+.problem-section {
+  margin-bottom: 1.5rem;
+}
+
+.repair-section .project-copy {
+  margin-bottom: 0.75rem;
+}
+
+.repair-section .project-copy:last-child {
+  margin-bottom: 0;
+}
+
+.project-copy {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 2.0rem
+}
+
+figure {
+  padding: 0px;
+  margin: 0px;
+}
+
+figcaption {
+  margin-bottom: 0.5rem;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.project-gallery-referral a,
+.project-gallery-referral a:visited {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #757575;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  margin-bottom: 1.25rem;
+}
+
+.project-gallery-referral {
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+  font-size: 0.85rem;
+  color: #757575;
+}
+
+.project-gallery-referral a:hover,
+.project-gallery-referral a:active {
+  color: #2563eb;
+  border-bottom: 1px solid #2563eb;
+}
+
+.project-page-intro {
+  background-color: #f5f5f5;
+
+}
+
+@media (max-width: 784px) {
+  .project-headings .project-title,
+  .project-headings .project-subtitle {
+    display: inline;
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .project-title,
+  .project-slide h2 {
+    font-size: 1.0rem;
+    font-weight: normal;
+  }
+
+  .project-description {
+    flex-direction: column;
+    font-size: 1.0rem;
+    gap: 1rem;
+  }
+
+  .project-featured-image,
+  .project-copy-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 584px) {
+  .project-page-intro {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,216 @@
+/*==================================================
+  GLOBAL & MODAL LOCKS
+==================================================*/
+
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/*==================================================
+  SITE HEADER (Sticky & Transition Logic)
+==================================================*/
+
+.site-header {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    #f5f5f5 0%,
+    rgba(245, 245, 245, 0.8) 100%
+  );
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-header.header-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.site-header .site-header-content {
+  display: flex;
+  align-items: center;
+  height: 75%;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.site-header .hero-logo-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-header .hero-logo-img {
+  height: auto;
+  max-height: 100%;
+  width: 165px;
+  object-fit: contain;
+}
+
+.site-header .header-contact {
+  margin-left: auto;
+  font-size: 1.1rem;
+  color: #444;
+  white-space: nowrap;
+}
+
+
+/*==================================================
+  PROJECT INDEX LIST (Craigslist‑style)
+==================================================*/
+
+.project-index {
+  max-width: 786px;
+  margin: 2rem 20px;
+  padding: 0;
+}
+
+.project-index h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-list li:last-child {
+  border-bottom: none;
+}
+
+.project-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+/*==================================================
+  FOOTER SECTION (Desktop/Default)
+==================================================*/
+
+footer {
+  display: flex;
+  padding: 20px;
+  padding-top: 36px;
+  border-top: 2px solid #ccc;
+  color: #333;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background:white;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  align-self:center;
+}
+
+.contact-info a {
+  color: #333;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  padding-top: 1rem;
+}
+
+.review-container-content {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 31px 0px 9px 12px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.review-label {
+  display: block;
+  margin: -39px 14px 10px 4px;
+  background: white;
+  padding: 0 10px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+}
+
+.google-review-badge {
+  display: block;
+  height: 100px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 153px;
+  padding-left: 0px;
+
+.attribution {
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: -9px;
+}
+
+.attribution a {
+  color: #666;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*==================================================
+  CORE RESPONSIVE BREAKPOINTS
+==================================================*/
+
+@media (max-width: 784px) {
+
+
+
+  footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    clear: both;
+  }
+
+  .review-container {
+    margin-left: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+}
