@@ -1,0 +1,112 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "The Square Repair",
+    "alternateName": "Chielo Zimmerman LLC",
+    "url": "https://zimchi.github.io/thesquarerepair/",
+    "telephone": "+1-434-566-1023",
+    "email": "chielo.zimmerman@gmail.com",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://thesquarerepair.com/projects/images/shower-repair/charlottesville-22901/1/shower-repair-tile-installation-complete.jpg",
+      "width": "1200",
+      "height": "900"
+    },
+    "description": "House Repair and Handyman Services, serving North Albemarle, Charlottesville, Ruckersville, and Zion Crossroads.",
+    "areaServed": [
+      { "@type": "Place", "name": "North Albemarle" },
+      { "@type": "City", "name": "Charlottesville" },
+      { "@type": "Place", "name": "Earlysville" },
+      { "@type": "Place", "name": "Hollymead" },
+      { "@type": "Place", "name": "Forest Lakes" },
+      { "@type": "Place", "name": "Rio" },
+      { "@type": "Place", "name": "Proffit" },
+      { "@type": "Place", "name": "Ruckersville" },
+      { "@type": "Place", "name": "Barboursville" },
+      { "@type": "Place", "name": "Stony Point" },
+      { "@type": "Place", "name": "Pantops" },
+      { "@type": "Place", "name": "Shadwell" },
+      { "@type": "Place", "name": "Keswick" },
+      { "@type": "Place", "name": "Glenmore" },
+      { "@type": "Place", "name": "Zion Crossroads" },
+      { "@type": "Place", "name": "Spring Creek" },
+      { "@type": "City", "name": "Gordonsville" },
+      { "@type": "Place", "name": "Troy" },
+      { "@type": "Place", "name": "Palmyra" },
+      { "@type": "Place", "name": "Lake Monticello" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "General Contracting Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Trim & Cabinet Carpentry",
+            "description": "Trim and finish carpentry; cabinet installation, kitchen cabinets; installation of crown molding, baseboards, and shoe."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Tile Installation & Repair",
+            "description": "Tile installation and repair; grout sealing and cleaning; Schluter Kerdi waterproofing; shower tiling; kitchen backsplashes; slate, porcelain, ceramic, vinyl tile (LVT)."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Drywall Patching & Finishing",
+            "description": "High quality Sheetrock and drywall patching; wall/ceiling repair with low-dust wet sanding."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fine Brush & Roller Painting",
+            "description": "High-quality interior painting with clean lines and precision detail."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Exterior Wood Repair",
+            "description": "Restoration of rotten wood; repair of fascia and under-gutter boards; soffit repair under house eaves; weather-resistant window trim replacement."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Framing and Deck Carpentry",
+            "description": "Structural framing, subfloor repair, deck construction, stair carpentry and construction."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "The Square Repair",
+        "item": "https://thesquarerepair.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "29 North Project Log",
+        "item": "https://thesquarerepair.com/projects/tile-shower-leak-repair-charlottesville-va.html"
+      }
+    ]
+  }
+]

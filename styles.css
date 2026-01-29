@@ -1,0 +1,14 @@
+@import url('css/layout-core.css');
+@import url('css/hero.css');
+@import url('css/services.css');
+@import url('css/pledge.css');
+@import url('css/modal.css');
+@import url('css/project-log-styles.css');
+
+
+body {
+  margin: 0px;
+  font-size: 1.1rem;
+  font-family: 'Roboto Slab', serif;
+  background: #f5f5f5;
+}

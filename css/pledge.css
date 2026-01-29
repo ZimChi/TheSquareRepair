@@ -1,0 +1,161 @@
+/* ============================================
+   BASE SHARED LAYOUT (DESKTOP)
+============================================ */
+
+.profile-block {
+  margin: 0 1.25rem;
+}
+
+.profile-block-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 786px;
+  padding: 5.25rem 1.25rem 5.25rem;
+  margin-bottom: 1.25rem;
+
+}
+
+.profile-img-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.profile-name {
+  margin-top: 0.75rem;
+  color: #333;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.profile-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #222;
+  align-self: center;
+}
+
+.profile-text p {
+  margin:0px;
+  display:flex;
+}
+
+.profile-text p + p {
+  margin-top: 1rem;
+}
+
+.profile-block--stack .profile-block-flex {
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   RESPONSIVE BASELINE (APPLIES TO BOTH)
+============================================ */
+
+@media (max-width: 784px) {
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-text {
+    font-size: 1.0rem;
+    line-height: 1.4;
+    margin-left: 1.25rem;
+  }
+  .profile-block-flex {
+     gap: 0rem;
+  }
+
+}
+
+
+/* ============================================
+   STACK MODE (PLEDGE)
+   — centered vertical stack
+============================================ */
+
+@media (max-width: 584px) {
+
+  .profile-text {
+    margin-left: 0;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-block--stack .profile-block-flex {
+    display: block;
+    text-align: center;
+  }
+
+  .profile-block--stack .profile-img-wrap {
+    margin: 0 auto 1rem auto;
+    float: none;
+  }
+
+  .profile-block--stack .profile-text {
+    margin-top: 1rem;
+  }
+
+  .profile-block--stack .profile-name {
+    display: block;
+    margin-top: 0.5rem;
+  }
+  .profile-block--wrap .profile-block-flex {
+    display: block;
+    width: auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .profile-text p {
+    margin:0px;
+    display:block;
+  }
+}
+
+
+/* ============================================
+   WRAP MODE (BRANDING)
+   — float-left image, text wraps
+   — fully isolated to prevent bleed
+============================================ */
+
+@media (max-width: 784px) {
+
+
+  .profile-block--wrap .profile-img-wrap {
+    float: left;
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+
+  }
+
+  .profile-block--wrap .profile-name {
+    display: none;
+  }
+
+  .profile-block--wrap .profile-block-flex::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
