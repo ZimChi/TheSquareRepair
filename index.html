@@ -13,7 +13,7 @@
 
 <body>
 
-  <header class="site-header" style="opacity: 1; pointer-events: auto"></header>
+  <header class="site-header"></header>
 
 
   <section class="hero">
@@ -34,7 +34,7 @@
             <h2 class="tagline">House Repair and Handyman Services</h2>
           </div>
         </div>
-        <p class="hero-subheading">Northern Albemarle · Charlottesville · Ruckersville · Zion Crossroads</p>
+        <p class="hero-subheading">Charlottesville · Ruckersville · Zion Crossroads</p>
         <p class="contact">Call or text: <strong>434-566-1023</strong></p>
       </div>
     </div>
@@ -402,7 +402,8 @@
 
       if ( cls.contains('modal')   ||
            cls.contains('gutter-right') ||
-           cls.contains('gutter-left') ) {
+           cls.contains('gutter-left') ||
+           cls.contains('modal-logo-img')) {
 
            modal.style.display = 'none';
            document.body.classList.remove('modal-open');
@@ -436,12 +437,6 @@
         }
       }
 
-      // modal.addEventListener('click', function (e) {
-      //   if (!e.target.closest('.modal-content')) {
-      //     modal.style.display = 'none';
-      //     document.body.classList.remove('modal-open');
-      //   }
-      // });
     });
 
     window.onscroll = function() {
