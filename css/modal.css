@@ -51,33 +51,31 @@
 .close {
   position: absolute;
   top: 1.25rem;
-
-
   background: rgba(250,250,250, 0.75);
-      color: black;
-      border: none;
-      border-radius: 50%;
-      width: 4.125rem;
-      height: 4.125rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 4.125rem;
+  height: 4.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 3.5rem;
-      cursor: pointer;
+  cursor: pointer;
 }
 
 .modal-nav {
   background: rgba(250,250,250, 0.75);
-      color: black;
-      border: none;
-      border-radius: 50%;
-      width: 4.125rem;
-      height: 4.125rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      cursor: pointer;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 4.125rem;
+  height: 4.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .modal-nav.disabled {
@@ -201,7 +199,8 @@
   RESPONSIVE (OPTIONAL)
 ==================================================*/
 
-@media (max-width: 49rem) {   /* 784px */
+@media (max-width: 49rem) {
+
   .modal-content {
     flex-direction: column;
   }
@@ -211,14 +210,48 @@
     flex: 0 0 auto;
     height: auto;
     justify-content: center;
+    position: static;   /* gutters no longer block arrow overlay */
   }
 
   .project-slider {
     flex: 1 1 auto;
     width: 100%;
+    position: relative; /* anchor for arrows */
   }
 
   .project-slide {
     flex: 0 0 100%;
   }
+
+  .close {
+    z-index: 1100;
+    top: 1.3rem;
+    background:#333;
+    right: 2rem;
+    color: white;
+  }
+
+  /* arrows overlay image edges */
+  .modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1200;
+    background:#333;
+    color: white;
+  }
+
+  .modal-nav.prev {
+    left: 1.25rem;
+  }
+
+  .modal-nav.next {
+    right: 1.25rem;
+  }
+
+  .modal-nav.disabled {
+  display:none;
+  }
+
+
 }
