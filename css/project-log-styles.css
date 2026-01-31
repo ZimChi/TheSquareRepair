@@ -160,7 +160,6 @@ figcaption {
 
   .project-featured-image,
   .project-copy-container {
-    flex: 0 0 100%;
     max-width: 100%;
   }
 }
