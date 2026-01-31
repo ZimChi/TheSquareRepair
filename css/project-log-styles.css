@@ -158,9 +158,13 @@ figcaption {
     gap: 1rem;
   }
 
-  .project-featured-image,
   .project-copy-container {
     max-width: 100%;
+  }
+  .project-featured-image {
+    max-width: 100%;
+    display:block;
+    height:auto;
   }
 }
 
