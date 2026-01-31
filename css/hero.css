@@ -71,7 +71,7 @@
 }
 
 .square-icon {
-  height: 115px;
+  height: 6.875rem;
   width: auto;
 }
 
@@ -89,7 +89,7 @@
 
 .brand-name {
   margin: 0;
-  font-size: 4.15rem;
+  font-size: 3.6rem;
   font-weight: 700;
   letter-spacing: 0px;
   color: #000;
@@ -114,7 +114,7 @@
 .tagline {
   margin: 0;
   padding: 0;
-  font-size: 2rem;
+  font-size: 1.67rem;
   font-weight: 300;
   letter-spacing: 1px;
   color: #333;
@@ -124,12 +124,12 @@
 /* Location & Contact Information */
 .hero-subheading {
   margin-top: 2.5rem;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   color: #666;
 }
 
 .hero .contact {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #444;
   margin-top: 0.5rem;
 }
@@ -142,25 +142,49 @@
   .brand-main {
     gap: 0.5rem;
   }
+  .tagline {
+    font-size: 1.55rem;
+  }
 
   .square-icon {
-    height: 70px;
+    height: 4.94rem;
   }
 
   .brand-top-line {
     font-size: 1.5rem;
   }
 
-  .brand-name {
-    font-size: 2.8rem;
-  }
-
-  .tagline {
-    font-size: 1.1rem; /* Slightly larger than before for readability */
-  }
-
   .hero-subheading {
     padding: 0 20px;
-    font-size: 1.1rem;
+
   }
+}
+
+@media (max-width: 584px) {
+  .brand-name {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .tagline {
+    font-size: 0.78rem;
+  }
+
+    .square-icon {
+      height: 3.45rem;
+    }
+    .square-icon {
+      height: 3.31rem;
+    }
+
+    .brand-top-line {
+      font-size: 1.25rem;
+    }
+
+    .hero-subheading {
+      padding: 0 20px;
+      max-width: 16.5rem;
+      font-size: 0.75rem;
+
+    }
+
 }
