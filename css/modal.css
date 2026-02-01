@@ -226,9 +226,11 @@
   .close {
     z-index: 1100;
     top: 1.3rem;
-    background:#333;
-    right: 2rem;
+    background: #333;
+    right: 1.75rem;
     color: white;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 
   /* arrows overlay image edges */
