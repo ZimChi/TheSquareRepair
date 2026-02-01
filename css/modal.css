@@ -231,6 +231,7 @@
     color: white;
     width: 3.125rem;
     height: 3.125rem;
+    max-width:2rem;
   }
 
   /* arrows overlay image edges */
