@@ -225,21 +225,17 @@
 
   .close {
     position: absolute;
-    top: 1.3rem;
-    right: 1.3rem;
-
+    top: 24.3rem;
+    right: 1.25rem;
     width: 4.125rem;
     height: 4.125rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 2rem;
     border-radius: 50%;
     background: #333;
     color: white;
-
     -webkit-appearance: none;
     appearance: none;
     z-index: 2000;
