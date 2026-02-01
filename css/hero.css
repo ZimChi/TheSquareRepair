@@ -119,6 +119,7 @@
   letter-spacing: 1px;
   color: #333;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 /* Location & Contact Information */
@@ -183,6 +184,10 @@
     .hero-subheading {
       padding: 0 20px;
       max-width: 16.5rem;
+      font-size: 0.75rem;
+
+    }
+    .hero .contact {
       font-size: 0.75rem;
 
     }
