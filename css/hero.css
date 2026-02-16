@@ -39,7 +39,7 @@
   /* Align self to the bottom of the grid cell */
   align-self: end;
   justify-self: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 5rem;
   z-index: 2;
 }
 
