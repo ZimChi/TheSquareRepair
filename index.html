@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title> Square Repair Handyman Services</title>
+  <title> Square Repair Handyman Service</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
@@ -28,7 +28,7 @@
                 <h1 class="brand-name">
                   <span class="accent-color">SQUARE</span> REPAIR
                 </h1>
-                <h2 class="tagline">Handyman Services</h2>
+                <h2 class="branding-h2">Handyman Service</h2>
               </div>
             </div>
 
@@ -381,7 +381,17 @@
 
 
   <script src="/partials/partial-loader.js"></script>
-  <script src="https://elfsightcdn.com/platform.js" async></script>
+
+  <script>
+    if (location.hostname !== "localhost") {
+      const s = document.createElement("script");
+      s.src = "https://elfsightcdn.com/platform.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  </script>
+
+  <!-- <script src="https://elfsightcdn.com/platform.js" async></script> -->
 
   <script>
 
