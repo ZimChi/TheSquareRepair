@@ -176,7 +176,7 @@ footer {
   cursor: pointer;
   width: 153px;
   padding-left: 0px;
-
+}
 .attribution {
   text-align: center;
   font-size: 0.8em;
@@ -198,8 +198,6 @@ footer {
 ==================================================*/
 
 @media (max-width: 784px) {
-
-
 
   footer {
     flex-direction: column-reverse;
