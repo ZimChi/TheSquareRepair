@@ -14,19 +14,31 @@
   </url>
 
   <url>
-    <loc>https://www.thesquarerepair.com/projects/tile-shower-leak-repair-charlottesville-va</loc>
+    <loc>https://www.thesquarerepair.com/projects/tile-shower-leak-repair-charlottesville-va.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.thesquarerepair.com/projects/snaplock-vinyl-tile-replacement-charlottesville-va</loc>
+    <loc>https://www.thesquarerepair.com/projects/snaplock-vinyl-tile-replacement-charlottesville-va.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>http://localhost:3000/projects/snaplock-vinyl-tile-replacement-charlottesville-va</loc>
+    <loc>https://www.thesquarerepair.com/projects/stair-handrail-installation-barboursville-va.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thesquarerepair.com/projects/exterior-window-trim-repair-monticello-charlottesville-va.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.thesquarerepair.com/projects/exterior-renovation-ruckersville-va.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
