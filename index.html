@@ -80,13 +80,13 @@
       <div class="service-card" data-modal="modal-drywall">
         <h3 class="service-card-title">Drywall Patching & Finishing</h3>
         <p class="service-card-description">Wall repair, low dust wet sanding, high quality finish.</p>
-        <img src="images/Copilot_20250829_073807.png" alt="Drywall patching and finishing" class="service-card-image">
+        <img src="images/sheetrock-patch-repair-charlottesville.jpg" alt="Drywall patching and finishing" class="service-card-image">
       </div>
 
       <div class="service-card" data-modal="modal-painting">
         <h3 class="service-card-title">Fine Brush & Roller Painting</h3>
         <p class="service-card-description">Careful hand painting, clean lines, color changes, elevated surfaces and overhead areas.</p>
-        <img src="images/precision-brush-painting-ruckersville-va.jpg" alt="Interior painting with clean lines" class="service-card-image">
+        <img src="images/precision-brush-painting-ruckersville-va-thumbnail.jpg" alt="Interior painting with clean lines" class="service-card-image">
       </div>
     </div>
   </section>
@@ -135,7 +135,7 @@
             <div class="image-box">
 
               <div class="image-caption">
-                Deck extention framing with 45‑degree step‑down staircase
+                Deck extension framing with 45‑degree step‑down staircase
               </div>
 
               <img src="images/framing-DSCN0252.JPG"
@@ -146,6 +146,29 @@
           </div>
 
         </article>
+
+        <article class="project-slide">
+
+          <div class="modal-headings">
+            <img src="/images/logo.png" alt="Logo" class="modal-logo-img">
+          </div>
+
+          <div class="image-wrapper">
+            <div class="image-box">
+
+              <div class="image-caption">
+                Traditional framed deck steps in Charlottesville VA
+              </div>
+
+              <img src="images/framed-deck-steps-charlottesville.jpg"
+                   alt="Traditional framed deck steps in Charlottesville VA featuring a six-tread staircase transitioning down a backyard hill."
+                   class="modal-featured-image">
+
+            </div>
+          </div>
+
+        </article>
+
 
       </div>
 
@@ -455,7 +478,46 @@
     </div>
   </div>
 
+  <div id="modal-drywall" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
 
+        <div class="gutter-left">
+          <div class="close" aria-label="Close">&times;</div>
+          <button class="modal-nav prev disabled" aria-label="Previous Project">&#10094;</button>
+        </div>
+
+        <div class="project-slider">
+
+          <article class="project-slide">
+
+            <div class="modal-headings">
+              <img src="/images/logo.png" alt="Logo" class="modal-logo-img">
+            </div>
+
+            <div class="image-wrapper">
+              <div class="image-box">
+
+                <div class="image-caption">
+                  Sheetrock patch in Charlottesville VA before final sanding
+                </div>
+
+                <img src="images/sheetrock-patch-repair-charlottesville.jpg"
+                     alt="Sheetrock patch in Charlottesville VA before final sanding"
+                     class="modal-featured-image">
+
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="gutter-right">
+          <button class="modal-nav next disabled" aria-label="Next Project">&#10095;</button>
+        </div>
+
+      </div>
+    </div>
   <script src="/partials/partial-loader.js"></script>
 
   <script>
@@ -497,59 +559,43 @@
     });
 
     document.querySelectorAll('.modal').forEach(modal => {
-
-      modal.querySelectorAll('.close').forEach(btn => {
-        btn.addEventListener('click', () => {
-          modal.style.display = 'none';
-          document.body.classList.remove('modal-open');
-        });
-      });
-
-      modal.addEventListener('click', (e) => {
-      console.log("click");
-      console.log(e.target)
-      const cls = e.target.classList;
-
-      console.log(e.target)
-
-      if ( cls.contains('modal')   ||
-           cls.contains('gutter-right') ||
-           cls.contains('gutter-left') ||
-           cls.contains('modal-logo-img')) {
-
-           modal.style.display = 'none';
-           document.body.classList.remove('modal-open');
-      }
-
-
-
-    });
-
-  });
-    document.querySelectorAll('.modal').forEach(modal => {
       const slider = modal.querySelector('.project-slider');
       const prevBtn = modal.querySelector('.modal-nav.prev');
       const nextBtn = modal.querySelector('.modal-nav.next');
+      const closeBtn = modal.querySelector('.close');
 
-      // Listen for scroll events to toggle buttons
-      if (slider) {
+      // Toggle buttons on scroll
+      if (slider && prevBtn && nextBtn) {
         slider.addEventListener('scroll', () => updateNavButtons(slider, prevBtn, nextBtn));
 
-        // Set up Nav Button Clicks
-        if (nextBtn) {
-          nextBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
-          });
-        }
+        nextBtn.addEventListener('click', () => {
+          slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+        });
 
-        if (prevBtn) {
-          prevBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
-          });
-        }
+        prevBtn.addEventListener('click', () => {
+          slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+        });
       }
 
+      // Close functionality
+      closeBtn?.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+      });
+
+      // Background/Gutter click to close
+      modal.addEventListener('click', (e) => {
+        const targetClass = e.target.classList;
+        if (targetClass.contains('modal') ||
+            targetClass.contains('gutter-right') ||
+            targetClass.contains('gutter-left') ||
+            targetClass.contains('modal-logo-img')) {
+          modal.style.display = 'none';
+          document.body.classList.remove('modal-open');
+        }
+      });
     });
+
 
     window.onscroll = function() {
       const header = document.querySelector('header');
