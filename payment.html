@@ -15,7 +15,7 @@
 
   <section class="payment-section">
 
-    <div class="welcome">Welcome to the payment page for The Square Repair Handyman Service.</div>
+    <div class="welcome">Welcome to the payment page for The Square Repair Handyman Service</div>
     <div class="welcome-subheading">Thank you for your business.</div>
 
     <div class="payment-intro">
@@ -27,9 +27,7 @@
     <div class="invoice-details-container">
 
       <div class="invoice-details-heading">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-             viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
           <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
           <path d="M10 9H8"></path>
@@ -39,22 +37,39 @@
         INVOICE DETAILS
       </div>
 
-      <div class="payment-row">
-        <span class="payment-label">Description of service:</span>
-        <span id="serviceDescription"></span>
+      <div class="description-title">
+        DESCRIPTION OF SERVICE
       </div>
 
-      <div class="payment-row">
-        <span class="payment-label">Invoice date:</span>
-        <span id="invoiceDate"></span>
+      <div class="description-inline">
+        <span id="serviceDescription">Multi-Trade Bathroom Repair, Kitchen Repair with associated </span>
+        <a id="viewInvoiceLink" href="#">View invoice</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true">
+          <path d="M15 3h6v6"></path>
+          <path d="M10 14 21 3"></path>
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+        </svg>
       </div>
 
-      <div class="payment-row">
-        <span class="payment-label">Invoice amount:</span>
-        <span id="amountDue"></span>
+
+      <div class="invoice-separator"></div>
+
+      <div class="invoice-bottom-row">
+
+        <div class="invoice-date-block">
+          <span class="invoice-date-label">INVOICE DATE</span>
+          <span id="invoiceDate"></span>
+        </div>
+
+        <div class="invoice-amount-block">
+          <span class="invoice-amount-label">INVOICE AMOUNT</span>
+          <span id="amountDue"></span>
+        </div>
+
       </div>
 
     </div>
+
 
     <div class="payment-container">
 
@@ -71,6 +86,39 @@
       <button id="openPaymentPortal" class="payment-button">
         Open Payment Portal
       </button>
+
+      <div class="new-window-note">
+        A secure window will open to complete your payment.
+      </div>
+
+    </div>
+
+    <div class="check-payment-container">
+
+      <div class="check-payment-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        PREFER TO PAY BY CHECK?
+      </div>
+
+      <div class="check-payment-copy">
+        If you'd rather not use the online portal, you may mail a personal or business check. Please make checks payable to The Square Repair Handyman Service.
+      </div>
+
+      <div class="check-payment-address">
+        <div class="mail-to-heading"> MAIL TO </div>
+        The Square Repair Handyman Service<br>
+        PO Box 4<br>
+        Gordonsville, VA 22942
+      </div>
+
+      <div class="check-payment-copy">
+        Please let me know if you have selected this option.
+      </div>
 
     </div>
 

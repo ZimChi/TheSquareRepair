@@ -8,9 +8,8 @@
 }
 
 .welcome {
-
   text-align: center;
-  color:hsl(222.2 84% 4.9%);
+  color: hsl(222.2 84% 4.9%);
   margin-bottom: 2rem;
   margin-top: 6rem;
   font-size: 2.25rem;
@@ -21,7 +20,7 @@
   text-align: center;
   font-size: 1.125rem;
   margin-bottom: 2rem;
-  color:hsl(222.2 84% 4.9%);
+  color: hsl(222.2 84% 4.9%);
 }
 
 .payment-intro {
@@ -41,46 +40,97 @@
   margin: 0 auto;
   padding: 2rem;
   border-radius: 6px;
-  border: 1px solid hsl(215.4 16.3% 46.9%);;
+  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 
 .invoice-details-heading {
   display: flex;
   align-items: center;
   gap: 6px;
-
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   color: hsl(215.4 16.3% 46.9%);
+  margin-bottom:1rem;
+}
+
+.description-title {
+  text-align: left;
+  font-size: 0.75rem;
+  color: hsl(215.4 16.3% 46.9%);
+  margin-bottom: 0.25rem;
+}
+
+.description-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 0.875rem;
+  color: hsl(222.2 84% 4.9%);
+}
+
+.description-inline a {
+  color: hsl(222.2 84% 4.9%);
+  text-decoration: underline;
+}
+
+.invoice-separator {
+  border-bottom: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
+  margin-top: 1rem;
+}
+
+.invoice-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.invoice-date-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-amount-block {
+  display: flex;
+  flex-direction: column;
+  text-align:right;
+  font-size: 1.125rem;
 }
 
 
+.invoice-date-label,
+.invoice-amount-label {
+  font-size: 0.75rem;
+  color: hsl(215.4 16.3% 46.9%);
+  margin-bottom: 0.25rem;
+}
+
 .payment-container {
   box-sizing: border-box;
-
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 6px;
-  border: 1px solid hsl(215.4 16.3% 46.9%);
+  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 200px;
 }
 
-.secured-line {
+.secured-line, .new-window-note {
   font-size: 0.8rem;
   color: hsl(215.4 16.3% 46.9%);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -13px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+
 }
 
 .secured-line svg {
@@ -92,12 +142,11 @@
 .payment-row {
   display: flex;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   color: hsl(222.2 84% 4.9%);
 }
 
 .payment-label {
-
   color: hsl(215.4 16.3% 46.9%);
 }
 
@@ -106,7 +155,6 @@
   background: hsl(222.2 84% 4.9%);
   padding: 0.75rem;
   font-size: 0.9rem;
-
   cursor: pointer;
   color: #ffffff;
   border-radius: 7px;
@@ -116,13 +164,56 @@
 .payment-mail {
   font-size: 0.9rem;
   line-height: 1.4;
-  color:hsl(222.2 84% 4.9%);
+  color: hsl(222.2 84% 4.9%);
   text-align: center;
+}
+
+.check-payment-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 200px;
+}
+
+.check-payment-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+.mail-to-heading {
+  font-size: 0.75rem;
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+.check-payment-copy {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+.check-payment-address {
+  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: hsl(222.2 84% 4.9%);
 }
 
 @media (max-width: 768px) {
   .payment-container,
-  .invoice-details-container {
+  .invoice-details-container,
+  .check-payment-container {
     width: 566px;
     max-width: 566px;
   }
@@ -130,7 +221,8 @@
 
 @media (max-width: 584px) {
   .payment-container,
-  .invoice-details-container {
+  .invoice-details-container,
+  .check-payment-container {
     width: 327px;
     max-width: 327px;
   }
