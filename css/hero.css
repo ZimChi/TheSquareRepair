@@ -1,18 +1,10 @@
-/*==================================================
-  HEADER SECTION STYLES
-==================================================*/
-
-
-/*==================================================
-  HERO SECTION STYLES
-==================================================*/
-
+/* hero.css (revised, with logo-composite removed) */
 
 .hero {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr; /* Define a single cell that covers the whole viewport */
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   background-color: #f5f5f5;
   margin: 0;
@@ -21,7 +13,6 @@
 }
 
 .hero-content {
-  /* Occupy the full grid space */
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   display: flex;
@@ -33,10 +24,8 @@
 }
 
 .hero .chevron-down {
-  /* Occupy the same grid space */
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  /* Align self to the bottom of the grid cell */
   align-self: end;
   justify-self: center;
   margin-bottom: 5rem;
@@ -47,82 +36,6 @@
   width: 48px;
   height: 48px;
   stroke: #333;
-}
-
-/*==================================================
-  HERO BRANDING (LOGO COMPOSITE)
-==================================================*/
-
-.logo-composite {
-  display: flex;
-  justify-content: center;
-}
-
-.brand-text-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.brand-main {
-  display: flex;
-  align-items: flex-end; /* Icon sits on the text baseline */
-  gap: 1rem;
-}
-
-.square-icon {
-  height: 142px;
-  width: auto;
-}
-
-.brand-title-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.brand-top-line {
-  font-size: 3.5rem;
-  line-height: 67px;
-  font-weight: 300;
-  color: #1a304e;
-}
-
-.brand-name {
-  margin: 0;
-  font-size: 3.6rem;
-  font-weight: 700;
-  letter-spacing: 0px;
-  color: #000;
-  text-transform: uppercase;
-  white-space: nowrap;
-  line-height: 3.3rem;
-}
-
-.accent-color {
-  color: #5980a4;
-}
-
-
-.brand-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #2d5a27;
-  margin: 0.6rem 0;
-}
-
-
-.branding-h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 21.5px;
-  font-weight: 300;
-  letter-spacing: 15.7px;
-  color: #333;
-  text-transform: uppercase;
-  margin-top: 10px;
-  line-height: 25px;
-  margin-left: 1px;
 }
 
 .hero-subheading {
@@ -137,74 +50,24 @@
   margin-top: 0.5rem;
 }
 
-/*==================================================
-  RESPONSIVE QUERIES
-==================================================*/
-
 @media (max-width: 768px) {
-  .brand-main {
-  }
-  .brand-name {
-    font-size:50px;
-  }
-
-  .branding-h2 {
-    font-size: 16px;
-    line-height: 20px;
-    margin-top:10px;
-  }
-
-  .square-icon {
-    height: 132px;
-  }
-
-  .brand-top-line {
-    font-size: 49px;
-  }
-
   .hero-subheading {
     padding: 0 20px;
-    font-size:18px;
-
+    font-size: 18px;
   }
 
-.hero .contact {
-      font-size:18px;
+  .hero .contact {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 584px) {
-  .brand-name {
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-  }
-  .branding-h2 {
-    font-size: 12px;
-    letter-spacing: 7px;
-    line-height: 8px;
+  .hero-subheading {
+    max-width: none;
+    font-size: 0.75rem;
   }
 
-    .square-icon {
-      height: 3.45rem;
-    }
-    .square-icon {
-      height: 74px;
-    }
-
-    .brand-top-line {
-      font-size: 1.25rem;
-      line-height: 34px;
-    }
-
-    .hero-subheading {
-      max-width: none;
-      font-size: 0.75rem;
-
-
-    }
-    .hero .contact {
-      font-size: 0.75rem;
-
-    }
-
+  .hero .contact {
+    font-size: 0.75rem;
+  }
 }

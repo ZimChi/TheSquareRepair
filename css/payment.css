@@ -1,0 +1,137 @@
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 6rem;
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.welcome {
+
+  text-align: center;
+  color:hsl(222.2 84% 4.9%);
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.welcome-subheading {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color:hsl(222.2 84% 4.9%);
+}
+
+.payment-intro {
+  max-width: 672px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: hsl(215.4 16.3% 46.9%);
+  padding: 0;
+  margin-bottom: 0rem;
+}
+
+.invoice-details-container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid hsl(215.4 16.3% 46.9%);;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.invoice-details-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 1.1rem;
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+
+.payment-container {
+  box-sizing: border-box;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid hsl(215.4 16.3% 46.9%);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 200px;
+}
+
+.secured-line {
+  font-size: 0.8rem;
+  color: hsl(215.4 16.3% 46.9%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -13px;
+}
+
+.secured-line svg {
+  margin-right: 6px;
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: hsl(222.2 84% 4.9%);
+}
+
+.payment-label {
+
+  color: hsl(215.4 16.3% 46.9%);
+}
+
+.payment-button {
+  width: 207px;
+  background: hsl(222.2 84% 4.9%);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 7px;
+  margin: 0 auto;
+}
+
+.payment-mail {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color:hsl(222.2 84% 4.9%);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .payment-container,
+  .invoice-details-container {
+    width: 566px;
+    max-width: 566px;
+  }
+}
+
+@media (max-width: 584px) {
+  .payment-container,
+  .invoice-details-container {
+    width: 327px;
+    max-width: 327px;
+  }
+}
