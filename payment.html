@@ -42,15 +42,9 @@
       </div>
 
       <div class="description-inline">
-        <span id="serviceDescription">Multi-Trade Bathroom Repair, Kitchen Repair with associated </span>
-        <a id="viewInvoiceLink" href="#">View invoice</a>
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true">
-          <path d="M15 3h6v6"></path>
-          <path d="M10 14 21 3"></path>
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-        </svg>
-      </div>
+        <span id="serviceDescription"></span>
 
+      </div>
 
       <div class="invoice-separator"></div>
 
@@ -70,7 +64,6 @@
 
     </div>
 
-
     <div class="payment-container">
 
       <div class="secured-line">
@@ -86,6 +79,12 @@
       <button id="openPaymentPortal" class="payment-button">
         Open Payment Portal
       </button>
+
+      <div id="spinnerContainer"></div>
+
+      <div id="verificationError">
+        We couldn’t verify your request. Please try again or contact support.
+      </div>
 
       <div class="new-window-note">
         A secure window will open to complete your payment.
@@ -133,22 +132,53 @@
       params.get('invoiceDate') || '';
 
     document.getElementById('serviceDescription').textContent =
-      params.get('description') || '';
+      params.get('serviceDescription') || '';
 
     document.querySelectorAll('#amountDue').forEach(el => {
       el.textContent = params.get('amount') ? `$${params.get('amount')}` : '';
     });
 
-    const signedUrl = params.get('signature')
-      ? `/verify?${params.toString()}`
-      : null;
-
     document.getElementById('openPaymentPortal').onclick = () => {
-      if (signedUrl) window.location.href = signedUrl;
+      console.log("clicked payment portal button")
     };
 
-    console.log("signedUrl", signedUrl)
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const orgin =
+      window.location.origin === "http://localhost:3000"
+        ? "http://localhost:3001"
+        : "https://verifypayment.thesquarerepair.com";
+
+    const endpoint = `${orgin}/verify`;
+    const body = JSON.stringify(Object.fromEntries(urlParams));
+
+    console.log("VERIFY_REQUEST", endpoint, body);
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body
+    })
+    .then(async res => {
+      if (res.status === 401) {
+        document.getElementById('spinnerContainer').style.display = 'none';
+        document.getElementById('verificationError').style.display = 'block';
+        return;
+      }
+
+      const data = await res.json();
+      const invoiceUrl = data.invoiceUrl || "";
+
+      if (invoiceUrl) {
+        const link = document.getElementById('viewInvoiceLink');
+        link.onclick = () => window.open(invoiceUrl, '_blank');
+      }
+
+      document.getElementById('openPaymentPortal').style.display = 'block';
+      document.getElementById('spinnerContainer').style.display = 'none';
+    });
   </script>
+
 
   <script src="/partials/partial-loader.js"></script>
 
