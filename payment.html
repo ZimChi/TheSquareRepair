@@ -19,9 +19,8 @@
     <div class="welcome-subheading">Thank you for your business.</div>
 
     <div class="payment-intro">
-      Please remit your invoice payment through the secure payment portal below, operated by
-      <a href="https://www.forte.net" target="_blank">CSG&nbspForte</a>, an electronic payments processor in compliance with
-      <a href="https://www.nacha.org/" target="_blank">Nacha</a> security requirements. Banking information entered into the portal is encrypted end‑to‑end by CSG Forte and is never transmitted to or stored by The Square Repair Handyman Service.
+      Please remit your invoice payment through the secure payment portal below.  Banking information entered into the portal is encrypted end‑to‑end by <a href="https://www.forte.net" target="_blank">CSG&nbspForte</a>
+      and is never transmitted to or stored by The Square Repair Handyman Service.
     </div>
 
     <div class="invoice-details-container">
@@ -43,6 +42,14 @@
 
       <div class="description-inline">
         <span id="serviceDescription"></span>
+        <span class="invoice-link">
+          <a id="viewInvoiceLink" href="" target="_blank" rel="noopener noreferrer">View invoice</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true">
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          </svg>
+        </span>
 
       </div>
 
@@ -167,12 +174,10 @@
       }
 
       const data = await res.json();
-      const invoiceUrl = data.invoiceUrl || "";
 
-      if (invoiceUrl) {
-        const link = document.getElementById('viewInvoiceLink');
-        link.onclick = () => window.open(invoiceUrl, '_blank');
-      }
+      const decryptedInvoiceUrl = data.decryptedInvoiceUrl || "";
+      document.getElementById('viewInvoiceLink').href = decryptedInvoiceUrl;
+      document.getElementsByClassName('invoice-link')[0].style.display = 'block';
 
       document.getElementById('openPaymentPortal').style.display = 'block';
       document.getElementById('spinnerContainer').style.display = 'none';

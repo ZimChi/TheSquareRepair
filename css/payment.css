@@ -211,6 +211,10 @@
   color: hsl(222.2 84% 4.9%);
 }
 
+.invoice-link {
+  display:none
+}
+
 #verificationError {
   display: none;
   margin-top: 1rem;
