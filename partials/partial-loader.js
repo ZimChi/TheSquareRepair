@@ -21,7 +21,6 @@ async function loadPartial(selector, url, isSchema = false) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadPartial(null, '/partials/detail/schema-partial.json', true);
   loadPartial('.site-header', '/partials/detail/header.html');
   loadPartial('.site-footer', '/partials/detail/footer.html');
   loadPartial('.project-page-intro', '/partials/detail/project-page-intro.html');
