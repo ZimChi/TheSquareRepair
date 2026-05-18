@@ -42,5 +42,9 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://www.thesquarerepair.com/projects/exterior-renovation-lake-monticello-palmyra-va</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
