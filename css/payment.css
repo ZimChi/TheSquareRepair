@@ -120,6 +120,7 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 
 .secured-line, .new-window-note {
@@ -167,20 +168,6 @@
   line-height: 1.4;
   color: hsl(222.2 84% 4.9%);
   text-align: center;
-}
-
-.check-payment-container {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 6px;
-  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 200px;
 }
 
 .check-payment-heading {

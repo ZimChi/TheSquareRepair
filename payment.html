@@ -99,35 +99,6 @@
 
     </div>
 
-    <div class="check-payment-container">
-
-      <div class="check-payment-heading">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-             viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-        </svg>
-        PREFER TO PAY BY CHECK?
-      </div>
-
-      <div class="check-payment-copy">
-        If you'd rather not use the online portal, you may mail a personal or business check. Please make checks payable to The Square Repair Handyman Service.
-      </div>
-
-      <div class="check-payment-address">
-        <div class="mail-to-heading"> MAIL TO </div>
-        The Square Repair Handyman Service<br>
-        PO Box 4<br>
-        Gordonsville, VA 22942
-      </div>
-
-      <div class="check-payment-copy">
-        Please let me know if you have selected this option.
-      </div>
-
-    </div>
-
   </section>
 
   <footer class="site-footer"></footer>
@@ -151,13 +122,16 @@
 
     const urlParams = new URLSearchParams(window.location.search);
 
-    const orgin =
-      window.location.origin === "http://localhost:3000"
-        ? "http://localhost:3001"
-        : "https://verifypayment.thesquarerepair.com";
+    const orgin = "https://payment-helper.zimchi.workers.dev";
+
 
     const endpoint = `${orgin}/verify`;
-    const body = JSON.stringify(Object.fromEntries(urlParams));
+    const body = JSON.stringify({
+      amount: urlParams.get('amount'),
+      invoiceDate: urlParams.get('invoiceDate'),
+      orderNumber: urlParams.get('orderNumber'),
+      encryptedToken: urlParams.get('encryptedToken')
+    });
 
     console.log("VERIFY_REQUEST", endpoint, body);
 
