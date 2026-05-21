@@ -102,7 +102,6 @@
   font-size: 1.125rem;
 }
 
-
 .invoice-date-label,
 .invoice-amount-label {
   font-size: 0.75rem;
@@ -132,7 +131,6 @@
   justify-content: center;
   margin-bottom: 12px;
   margin-top: 12px;
-
 }
 
 .secured-line svg {
@@ -152,14 +150,14 @@
   color: hsl(215.4 16.3% 46.9%);
 }
 
-.payment-button {
+.payment-button.payment-button {
   width: 207px;
   background: hsl(222.2 84% 4.9%);
   padding: 0.75rem;
   font-size: 0.9rem;
   cursor: pointer;
   color: #ffffff;
-  border-radius: 7px;
+  border-radius: ;
   margin: 0 auto;
 }
 
@@ -170,36 +168,8 @@
   text-align: center;
 }
 
-.check-payment-heading {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  color: hsl(215.4 16.3% 46.9%);
-}
-
-.mail-to-heading {
-  font-size: 0.75rem;
-  color: hsl(215.4 16.3% 46.9%);
-}
-
-.check-payment-copy {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: hsl(215.4 16.3% 46.9%);
-}
-
-.check-payment-address {
-  border: 1px solid hsl(215.4deg 16.3% 46.9% / 28%);
-  border-radius: 6px;
-  padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: hsl(222.2 84% 4.9%);
-}
-
 .invoice-link {
-  display:none
+  display:none;
 }
 
 #verificationError {
@@ -210,10 +180,18 @@
   color: hsl(0 72% 50%);
 }
 
-
 #openPaymentPortal {
  display:none;
 }
+
+#thankYouMessage {
+  display: none;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+
 #spinnerContainer {
   width: 32px;
   height: 32px;
@@ -229,7 +207,6 @@
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
-
 
 @media (max-width: 768px) {
   .payment-container,
