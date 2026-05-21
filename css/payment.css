@@ -122,7 +122,7 @@
   margin-bottom: 200px;
 }
 
-.secured-line, .new-window-note {
+.secured-line, #new-window-note {
   font-size: 0.8rem;
   color: hsl(215.4 16.3% 46.9%);
   text-align: center;
