@@ -7,20 +7,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="js/payment.js" type="module"></script>
 
-  <script>
-    const forteScriptSrc =
-      window.location.origin === "http://localhost:3000"
-        ? "https://sandbox.forte.net/checkout/v2/js"
-        : "https://checkout.forte.net/v2/js";
-
-    const s = document.createElement("script");
-    s.type = "text/javascript";
-    s.src = forteScriptSrc;
-    s.defer = true;
-    document.head.appendChild(s);
-  </script>
-</head>
+ </head>
 
 <body>
 
@@ -124,7 +113,7 @@
 
   <footer class="site-footer"></footer>
 
-  <script>
+  <!-- <script>
   function oncallback(e) {
     var response = JSON.parse(e.data);
 
@@ -208,7 +197,7 @@
     });
 
 
-  </script>
+  </script> -->
 
   <script src="/partials/partial-loader.js"></script>
 
