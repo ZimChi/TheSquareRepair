@@ -8,16 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="js/payment.js" type="module"></script>
-
- </head>
-
+</head>
 
 <body>
 
   <header class="site-header header-visible"></header>
 
   <section class="payment-section">
-
     <div class="welcome">Welcome to the payment page for The Square Repair Handyman Service</div>
     <div class="welcome-subheading">Thank you for your business.</div>
 
@@ -26,7 +23,6 @@
     </div>
 
     <div class="invoice-details-container">
-
       <div class="invoice-details-heading">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -39,10 +35,9 @@
       </div>
 
       <div class="description-title">DESCRIPTION OF SERVICE</div>
-
       <div class="description-inline">
         <span id="serviceDescription"></span>
-        <span class="invoice-link">
+        <span id="invoiceLinkContainer" class="invoice-link">
           <a id="viewInvoiceLink" href="" target="_blank" rel="noopener noreferrer">View invoice</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true">
             <path d="M15 3h6v6"></path>
@@ -59,17 +54,14 @@
           <span class="invoice-date-label">INVOICE DATE</span>
           <span id="invoiceDate"></span>
         </div>
-
         <div class="invoice-amount-block">
           <span class="invoice-amount-label">INVOICE AMOUNT</span>
           <span id="amountDue"></span>
         </div>
       </div>
-
     </div>
 
     <div class="payment-container">
-
       <div class="secured-line">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
@@ -80,7 +72,7 @@
 
       <button
         id="openPaymentPortal"
-        class="payment-button payment-button"
+        class="payment-button"
         api_access_id=""
         method="sale"
         version_number="2.0"
@@ -95,27 +87,13 @@
       </button>
 
       <div id="spinnerContainer"></div>
-
-      <div id="thankYouMessage">
-        Success!
-      </div>
-
-      <div id="verificationError">
-        Payment window unavailable. Please contact Chielo.
-      </div>
-
-      <div id="new-window-note">
-        A secure window will open to complete your payment.
-      </div>
-
+      <div id="thankYouMessage">Success!</div>
+      <div id="verificationError">Payment window unavailable. Please contact Chielo.</div>
+      <div id="new-window-note">A secure window will open to complete your payment.</div>
     </div>
-
   </section>
 
   <footer class="site-footer"></footer>
-
-
   <script src="/partials/partial-loader.js"></script>
-
 </body>
 </html>
