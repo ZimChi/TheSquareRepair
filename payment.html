@@ -7,7 +7,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="js/payment.js" type="module"></script>
 </head>
 
 <body>
@@ -15,14 +14,17 @@
   <header class="site-header header-visible"></header>
 
   <section class="payment-section">
+
     <div class="welcome">Welcome to the payment page for The Square Repair Handyman Service</div>
     <div class="welcome-subheading">Thank you for your business.</div>
 
     <div class="payment-intro">
-      Please remit your invoice payment through the secure payment portal below. Banking information entered into the portal is encrypted end‑to‑end by <a href="https://www.forte.net" target="_blank">CSG&nbspForte</a> and is never transmitted to or stored by The Square Repair Handyman Service.
+      Please remit your invoice payment through the secure payment portal below.  Banking information entered into the portal is encrypted end‑to‑end by <a href="https://www.forte.net" target="_blank">CSG&nbspForte</a>
+      and is never transmitted to or stored by The Square Repair Handyman Service.
     </div>
 
     <div class="invoice-details-container">
+
       <div class="invoice-details-heading">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
@@ -34,66 +36,156 @@
         INVOICE DETAILS
       </div>
 
-      <div class="description-title">DESCRIPTION OF SERVICE</div>
+      <div class="description-title">
+        DESCRIPTION OF SERVICE
+      </div>
+
       <div class="description-inline">
         <span id="serviceDescription"></span>
-        <span id="invoiceLinkContainer" class="invoice-link">
+        <!-- <span class="invoice-link">
           <a id="viewInvoiceLink" href="" target="_blank" rel="noopener noreferrer">View invoice</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link h-3.5 w-3.5" aria-hidden="true">
             <path d="M15 3h6v6"></path>
             <path d="M10 14 21 3"></path>
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
           </svg>
-        </span>
+        </span> -->
+
       </div>
 
       <div class="invoice-separator"></div>
 
       <div class="invoice-bottom-row">
+
         <div class="invoice-date-block">
           <span class="invoice-date-label">INVOICE DATE</span>
           <span id="invoiceDate"></span>
         </div>
+
         <div class="invoice-amount-block">
           <span class="invoice-amount-label">INVOICE AMOUNT</span>
           <span id="amountDue"></span>
         </div>
+
       </div>
+
     </div>
 
     <div class="payment-container">
+
       <div class="secured-line">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
         Secured by CSG Forte
       </div>
 
-      <button
-        id="openPaymentPortal"
-        class="payment-button"
-        api_access_id=""
-        method="sale"
-        version_number="2.0"
-        location_id=""
-        allowed_methods="echeck"
-        total_amount=""
-        utc_time=""
-        order_number=""
-        signature=""
-        callback="oncallback">
+      <button id="openPaymentPortal" class="payment-button">
         Open Payment Portal
       </button>
 
       <div id="spinnerContainer"></div>
-      <div id="thankYouMessage">Success!</div>
-      <div id="verificationError">Payment window unavailable. Please contact Chielo.</div>
-      <div id="new-window-note">A secure window will open to complete your payment.</div>
+
+      <div id="verificationError">
+        We couldn’t verify your request. Please try again or contact support.
+      </div>
+
+      <div class="new-window-note">
+        A secure window will open to complete your payment.
+      </div>
+
     </div>
+
+    <div class="check-payment-container">
+
+      <div class="check-payment-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        PREFER TO PAY BY CHECK?
+      </div>
+
+      <div class="check-payment-copy">
+        If you'd rather not use the online portal, you may mail a personal or business check. Please make checks payable to The Square Repair Handyman Service.
+      </div>
+
+      <div class="check-payment-address">
+        <div class="mail-to-heading"> MAIL TO </div>
+        The Square Repair Handyman Service<br>
+        PO Box 4<br>
+        Gordonsville, VA 22942
+      </div>
+
+      <div class="check-payment-copy">
+        Please let me know if you have selected this option.
+      </div>
+
+    </div>
+
   </section>
 
   <footer class="site-footer"></footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('invoiceDate').textContent =
+      params.get('invoiceDate') || '';
+
+    document.getElementById('serviceDescription').textContent =
+      params.get('serviceDescription') || '';
+
+    document.querySelectorAll('#amountDue').forEach(el => {
+      el.textContent = params.get('amount') ? `$${params.get('amount')}` : '';
+    });
+
+    document.getElementById('openPaymentPortal').onclick = () => {
+      console.log("clicked payment portal button")
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const orgin =
+      window.location.origin === "http://localhost:3000"
+        ? "http://localhost:3001"
+        : "https://verifypayment.thesquarerepair.com";
+
+    const endpoint = `${orgin}/verify`;
+    const body = JSON.stringify(Object.fromEntries(urlParams));
+
+    console.log("VERIFY_REQUEST", endpoint, body);
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body
+    })
+    .then(async res => {
+      if (res.status === 401) {
+        document.getElementById('spinnerContainer').style.display = 'none';
+        document.getElementById('verificationError').style.display = 'block';
+        return;
+      }
+
+      const data = await res.json();
+
+      const decryptedInvoiceUrl = data.decryptedInvoiceUrl || "";
+      // document.getElementById('viewInvoiceLink').href = decryptedInvoiceUrl;
+      // document.getElementsByClassName('invoice-link')[0].style.display = 'block';
+
+      document.getElementById('openPaymentPortal').style.display = 'block';
+      document.getElementById('spinnerContainer').style.display = 'none';
+    });
+  </script>
+
+
   <script src="/partials/partial-loader.js"></script>
+
 </body>
 </html>
