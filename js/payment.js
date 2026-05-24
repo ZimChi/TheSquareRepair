@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     amount: params.get('amount'),
     invoiceDate: params.get('invoiceDate'),
     orderNumber: params.get('orderNumber'),
-    encryptedToken: params.get('encryptedToken')
+    encryptedToken: params.get('encryptedToken'),
+    expectedEnvironment: isLocal ? "sandbox" : "production"
   });
 
   fetch(endpoint, {
