@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('signature', data.forteSignature);
     btn.setAttribute('location_id', data.locationId);
 
-    document.getElementById('viewInvoiceLink').href = data.decryptedInvoiceUrl || "";
-    const linkContainer = document.getElementById('invoiceLinkContainer');
-    if (linkContainer) linkContainer.style.display = 'block';
+    // document.getElementById('viewInvoiceLink').href = data.decryptedInvoiceUrl || "";
+    // const linkContainer = document.getElementById('invoiceLinkContainer');
+    // if (linkContainer) linkContainer.style.display = 'block';
 
     spinner.style.display = 'none';
     btn.style.display = 'block';
