@@ -1,8 +1,6 @@
 
-// const isLocal = window.location.origin === "http://localhost:3000";
-// const forteScriptSrc = isLocal ? "https://sandbox.forte.net/checkout/v2/js" : "https://checkout.forte.net/v2/js";
-
-const forteScriptSrc = "https://sandbox.forte.net/checkout/v2/js";
+const isLocal = window.location.origin === "http://localhost:3000";
+const forteScriptSrc = isLocal ? "https://sandbox.forte.net/checkout/v2/js" : "https://checkout.forte.net/v2/js";
 
 const s = document.createElement("script");
 s.type = "text/javascript";
