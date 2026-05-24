@@ -1,5 +1,8 @@
-const isLocal = window.location.origin === "http://localhost:3000";
-const forteScriptSrc = isLocal ? "https://sandbox.forte.net/checkout/v2/js" : "https://checkout.forte.net/v2/js";
+
+// const isLocal = window.location.origin === "http://localhost:3000";
+// const forteScriptSrc = isLocal ? "https://sandbox.forte.net/checkout/v2/js" : "https://checkout.forte.net/v2/js";
+
+const forteScriptSrc = "https://sandbox.forte.net/checkout/v2/js";
 
 const s = document.createElement("script");
 s.type = "text/javascript";
@@ -29,6 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.onclick = function() {
     spinner.style.display = 'block';
     btn.style.display = 'none';
+
+    const hideSpinnerOnBlur = () => {
+      spinner.style.display = 'none';
+      window.removeEventListener('blur', hideSpinnerOnBlur);
+      clearTimeout(fallbackTimer);
+    };
+
+    window.addEventListener('blur', hideSpinnerOnBlur);
+
   };
 
   const params = new URLSearchParams(window.location.search);
