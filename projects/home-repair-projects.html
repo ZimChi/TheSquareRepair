@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +46,14 @@
   }
   </script>
 
-  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <script>
+    if (location.hostname !== "localhost") {
+      const s = document.createElement("script");
+      s.src = "https://elfsightcdn.com/platform.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  </script>
 </head>
 <body>
 <header class="site-header" style="opacity:1;pointer-events:auto;margin-bottom:20px"></header>
@@ -81,7 +91,7 @@
             <li><a href="/projects/exterior-window-trim-repair-monticello-charlottesville-va">Exterior window trim repair — Charlottesville VA near Monticello High School</a></li>
             <li><a href="/projects/exterior-renovation-ruckersville-va">Exterior restoration and soffit repair — Ruckersville VA</a></li>
             <li><a href="/projects/exterior-renovation-lake-monticello-palmyra-va">Window Frame and Sash Repair — Near Lake Monticello, Palmyra VA</a></li>
-	    <li><a href="/projects/interior-paint-restoration-charlottesville-va">Interior paint restoration — Charlottesville VA</a></li> 	
+	    <li><a href="/projects/interior-paint-restoration-charlottesville-va">Interior paint restoration — Charlottesville VA</a></li>
 	  </ul>
     </section>
 
@@ -90,7 +100,7 @@
 
 </main>
 
-<footer class="site-footer"></footer>
+{% include footer.html %}
 <script src="/partials/partial-loader.js"></script>
 </body>
 </html>

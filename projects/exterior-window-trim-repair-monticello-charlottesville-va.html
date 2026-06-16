@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +61,14 @@
     }
     </script>
 
-    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <script>
+      if (location.hostname !== "localhost") {
+        const s = document.createElement("script");
+        s.src = "https://elfsightcdn.com/platform.js";
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    </script>
 </head>
 <body>
   <header class="site-header" style="opacity: 1; pointer-events: auto; margin-bottom: 20px"></header>
@@ -118,7 +128,7 @@
      <a href="/projects/home-repair-projects">View more Square Repair project logs</a>
   </p>
 
-  <footer class="site-footer"></footer>
+  {% include footer.html %}
 
   <script src="/partials/partial-loader.js"></script>
 </body>
