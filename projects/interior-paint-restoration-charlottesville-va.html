@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -67,7 +70,14 @@
       }
       </script>
 
-      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <script>
+        if (location.hostname !== "localhost") {
+          const s = document.createElement("script");
+          s.src = "https://elfsightcdn.com/platform.js";
+          s.async = true;
+          document.head.appendChild(s);
+        }
+      </script>
   </head>
 
   <body>
@@ -93,7 +103,7 @@
               </div>
 
               <div class="repair-section">
-                <p class="project-copy"><strong>Repair:</strong> 
+                <p class="project-copy"><strong>Repair:</strong>
 		The paint finish was restored by scraping out old cracked caulk, sanding distressed surfaces, applying putty to rebuild the trim and patch the adjacent sheetrock, and installing new caulk and paint.</p>
               </div>
 
@@ -163,9 +173,8 @@
        <a href="/projects/home-repair-projects">View more Square Repair project logs</a>
     </p>
 
-    <footer class="site-footer"></footer>
+    {% include footer.html %}
 
     <script src="/partials/partial-loader.js"></script>
   </body>
   </html>
-

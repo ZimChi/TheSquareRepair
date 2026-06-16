@@ -1,0 +1,4 @@
+title: The Square Repair Handyman Service
+url: "http://localhost:4000"
+
+exclude: [Gemfile, Gemfile.lock, Dockerfile, node_modules]
