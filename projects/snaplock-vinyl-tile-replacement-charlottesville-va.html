@@ -75,10 +75,10 @@
   </script>
 </head>
 <body>
-<header class="site-header" style="opacity:1;pointer-events:auto;margin-bottom:20px"></header>
+{% include header.html class="persistent-header" %}
 
 <main class="project-container">
-  <div class="project-page-intro"></div>
+  {% include project-page-intro.html %}
 
   <article class="project-wrapper">
     <div class="project-headings">
