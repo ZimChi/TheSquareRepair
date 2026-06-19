@@ -34,9 +34,17 @@ body.modal-open {
 }
 
 .site-header.header-visible {
-  opacity: 1;
-  pointer-events: auto;
+    opacity: 1;
+    pointer-events: auto;
 }
+
+
+.site-header.persistent-header {
+    opacity: 1;
+    pointer-events: auto;
+    margin-bottom: 20px;
+}
+
 
 .site-header .site-header-content {
   display: flex;
