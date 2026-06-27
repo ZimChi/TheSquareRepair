@@ -49,11 +49,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>/projects/interior-paint-restoration-charlottesville-va</loc>
+    <loc>https://www.thesquarerepair.com/projects/interior-paint-restoration-charlottesville-va</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
-
+  <url>
+    <loc>https://www.thesquarerepair.com/projects/sheetrock-repair-fry-springs-charlottesville-va</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
