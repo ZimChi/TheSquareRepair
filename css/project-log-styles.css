@@ -86,9 +86,9 @@
 }
 
 .project-images {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.5rem;
   width: 100%;
   font-size: 1rem;
   margin-top: 2.0rem
@@ -96,16 +96,26 @@
 
 figure {
   padding: 0px;
-  margin: 0px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  min-width: 0;
 }
 
 figcaption {
-  margin-bottom: 0.5rem;
+  width: 100%;
+  min-height: 45px;
+  margin-top: 25px;
 }
 
 .project-image {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 12rem);
+  margin: 0 auto;
+  object-fit: contain;
+  background: #f5f5f5;
   border-radius: 4px;
 }
 
@@ -183,6 +193,20 @@ figcaption {
     max-width: 100%;
     display:block;
     height:auto;
+  }
+
+  .project-images {
+    grid-template-columns: 1fr;
+  }
+
+  .project-images figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-images .project-image {
+    width: 100%;
+    max-height: none;
   }
 }
 
